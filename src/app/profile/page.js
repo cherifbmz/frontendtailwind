@@ -62,7 +62,7 @@ const Profile = () => {
                         {profile.housesForSale.map(house => (
                             <div key={house.id} className="border rounded p-4">
                                 <img
-                                    src={`http://localhost:8080/images/${house.imagePath}`}
+                                   src={`http://localhost:8080/houses/${house.id}/image`}
                                     alt={house.title}
                                     className="w-full h-48 object-cover mb-2"
                                 />
@@ -84,7 +84,7 @@ const Profile = () => {
                         {profile.housesBought.map(house => (
                             <div key={house.id} className="border rounded p-4">
                                 <img
-                                    src={`http://localhost:8080/images/${house.imagePath}`}
+                                    src={`http://localhost:8080/houses/${house.id}/image`}
                                     alt={house.title}
                                     className="w-full h-48 object-cover mb-2"
                                 />

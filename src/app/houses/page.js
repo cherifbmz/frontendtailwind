@@ -66,10 +66,10 @@ const HouseList = () => {
           {houses.map((house) => (
             <div key={house.id} className="bg-white rounded-lg shadow-md overflow-hidden">
               <img
-                src={`http://localhost:8080/images/${house.imagePath}`}
-                alt={house.title}
-                className="w-full h-48 object-cover"
-              />
+  src={`http://localhost:8080/houses/${house.id}/image`}
+  alt={house.title}
+  className="w-full h-auto object-cover"
+/>
               <div className="p-4">
                 <h3 className="text-xl font-bold text-gray-800">{house.title}</h3>
                 <p className="text-gray-600 mt-2">{truncateText(house.description, 50)}</p>

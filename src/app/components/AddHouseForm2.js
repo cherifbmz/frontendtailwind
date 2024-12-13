@@ -30,7 +30,7 @@ const AddHouseForm = () => {
         formData.append('image', image);
 
         try {
-            const response = await axios.post('http://localhost:8080/houses/add', formData, {
+            const response = await axios.post('http://localhost:8080/houses', formData, {
                 withCredentials: true, // Sends cookies for authentication
             });
 

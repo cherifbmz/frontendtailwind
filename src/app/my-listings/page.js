@@ -12,7 +12,7 @@ export default function MyListings() {
   useEffect(() => {
     const fetchListings = async () => {
       try {
-        const response = await fetch('http://localhost:8080/houses/my-listings', {
+        const response = await fetch('http://localhost:8080/users/me/houses', {
           credentials: 'include', // Include cookies for authentication
         });
         if (!response.ok) {
@@ -63,11 +63,11 @@ export default function MyListings() {
             {listings.map((listing) => (
               <li key={listing.id} className="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-6">
-                  <img
-                    src={`http://localhost:8080/images/${listing.imagePath}`}
-                    alt={listing.title}
-                    className="w-full lg:w-80 h-auto rounded-md shadow-md"
-                  />
+                <img
+  src={`http://localhost:8080/houses/${listing.id}/image`}
+  alt={listing.title}
+  className="w-full lg:w-80 h-auto rounded-md shadow-md"
+/>
                   <div className="flex-1">
                     <h2 className="text-2xl font-semibold text-gray-900">{listing.title}</h2>
                     <p className="text-gray-700 mt-2">{listing.description}</p>

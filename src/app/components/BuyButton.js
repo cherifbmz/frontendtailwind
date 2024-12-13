@@ -130,7 +130,7 @@ const BuyButton = ({ houseId }) => {
       }
   
       // If transfer is successful, proceed with house purchase
-      const houseResponse = await fetch(`http://localhost:8080/houses/${houseId}/buy`, {
+      const houseResponse = await fetch(`http://localhost:8080/houses/${houseId}/buyer`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

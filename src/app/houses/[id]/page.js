@@ -55,11 +55,12 @@ const HouseDetails = () => {
       <p className="text-sm text-gray-500 mb-6">Address: {house.address}</p>
 
       <div className="overflow-hidden rounded-lg shadow-lg mb-6">
-        <img
-          src={`http://localhost:8080/images/${house.imagePath}`}
-          alt={house.title}
-          className="w-full h-auto object-cover"
-        />
+      <img
+  src={`http://localhost:8080/houses/${id}/image`}
+  alt={house.title}
+  className="w-full h-auto object-cover"
+/>
+        
       </div>
 
       {/* Button to toggle map visibility */}
