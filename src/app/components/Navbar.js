@@ -21,10 +21,10 @@ const Navbar = () => {
         {/* Navbar Links */}
         <ul className="hidden md:flex space-x-8 text-lg font-medium text-white">
           <li>
-            <Link href="/buyinglist" className="hover:text-gray-200 transition duration-300 ease-in-out">Buying</Link>
+            <Link href="/houses/buy" className="hover:text-gray-200 transition duration-300 ease-in-out">Buying</Link>
           </li>
           <li>
-            <Link href="/Ajouterhouses" className="hover:text-gray-200 transition duration-300 ease-in-out">Selling</Link>
+            <Link href="/houses/sell" className="hover:text-gray-200 transition duration-300 ease-in-out">Selling</Link>
           </li>
 
           {/* User Profile Dropdown */}

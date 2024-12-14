@@ -142,15 +142,21 @@ const BuyButton = ({ houseId }) => {
       if (houseResponse.status === 204) {
         // No content response (successful purchase)
         setMessage("House purchased successfully!");
+        router.push('/profile');
+
       } else if (houseResponse.ok) {
         // If there's a JSON response
         try {
           const data = await houseResponse.json();
           setMessage("House purchased successfully!");
           console.log("Purchased house:", data);
+          router.push('/profile');
+
         } catch (jsonError) {
           // If json() fails, but status is ok
           setMessage("House purchased successfully!");
+          router.push('/profile');
+
         }
       } else {
         // Handle error responses

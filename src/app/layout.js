@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           {children} {/* Injects page content */}
           <footer className="bg-gray-900 text-white py-4 text-center">
             <p className="text-sm">
-              HomePursuit &copy; {new Date().getFullYear()}
+              boumehraz ahmed cherif & merabat rachid &copy; {new Date().getFullYear()}
             </p>
             <div className="flex justify-center space-x-4 mt-2">
               <a href="https://www.facebook.com/" className="text-blue-500">

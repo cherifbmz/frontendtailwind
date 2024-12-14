@@ -41,6 +41,7 @@ const AddHouseForm = () => {
                 setPrice('');
                 setAddress('');
                 setImage(null);
+                router.push('/houses/sell');
             } else {
                 setError(`Unexpected status code: ${response.status}`);
             }

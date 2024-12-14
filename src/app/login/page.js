@@ -33,7 +33,7 @@ const Login = () => {
       const data = await response.json();
       console.log('Login Response:', data); // Log the full response
 
-      router.push('/'); // Redirect to homepage after successful login
+      router.push('/houses/buy'); // Redirect to homepage after successful login
     } catch (err) {
       setError('An error occurred, please try again later');
     }
