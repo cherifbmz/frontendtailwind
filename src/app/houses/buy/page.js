@@ -68,10 +68,13 @@ const HouseList = () => {
               <img
   src={`http://localhost:8080/houses/${house.id}/image`}
   alt={house.title}
-  className="w-full h-auto object-cover"
+  className="w-full h-48 object-cover"
 />
               <div className="p-4">
-                <h3 className="text-xl font-bold text-gray-800">{house.title}</h3>
+              <h3 className="text-xl font-bold text-gray-800">
+  {truncateText(house.title, 30)}
+</h3>
+
                 <p className="text-gray-600 mt-2">{truncateText(house.description, 50)}</p>
                 <p className="text-gray-800 mt-2 font-semibold">Price: ${house.price}</p>
                 <p className="text-gray-600 mt-1">Address: {house.address}</p>

@@ -2,13 +2,17 @@
 
 import Link from 'next/link';
 import { useAuth } from '../context/AuthContext';
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
   const [showDropdown, setShowDropdown] = useState(false);
 
   const toggleDropdown = () => setShowDropdown(!showDropdown);
+ // Reset dropdown state when the user logs in or logs out
+ useEffect(() => {
+  setShowDropdown(false); // Reset dropdown state on page load
+}, [user, setShowDropdown]); // Depend on user to reset after login or logout
 
   return (
     <nav className="navbar fixed top-0 w-full bg-gradient-to-r from-blue-600 to-blue-800 shadow-xl z-50">
@@ -42,6 +46,7 @@ const Navbar = () => {
                     <Link
                       href="/profile"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition duration-200 ease-in-out"
+                    onClick={toggleDropdown}
                     >
                       View Profile
                     </Link>

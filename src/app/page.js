@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-[url('/images/houses.jpg')] bg-cover bg-center text-white py-32">
+      <section className="relative bg-[url('/images/houses3.jpg')] bg-cover bg-center text-white py-32">
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-80"></div>
 
@@ -13,7 +13,7 @@ export default function Home() {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-5xl font-extrabold mb-6">
             Buying and <br />
-            <span className="text-blue-400">Selling</span> Houses.
+            <span className="text-blue-400">Selling</span> Houses
             <br />
             Welcome
           </h1>

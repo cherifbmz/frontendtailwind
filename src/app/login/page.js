@@ -1,9 +1,10 @@
-'use client';
-
+"use client"
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
+  const { fetchUser } = useAuth();  // Add this
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
@@ -32,6 +33,8 @@ const Login = () => {
 
       const data = await response.json();
       console.log('Login Response:', data); // Log the full response
+
+      await fetchUser();  // Fetch the user data immediately after login
 
       router.push('/houses/buy'); // Redirect to homepage after successful login
     } catch (err) {
